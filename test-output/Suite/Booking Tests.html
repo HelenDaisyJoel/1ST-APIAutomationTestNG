@@ -1,0 +1,199 @@
+<html>
+<head>
+<title>TestNG:  Booking Tests</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Booking Tests</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>6/2/0</td>
+</tr><tr>
+<td>Started on:</td><td>Wed Jun 26 17:06:07 IST 2024</td>
+</tr>
+<tr><td>Total time:</td><td>34 seconds (34603 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td>bookingGroup sourceGroup decoderGroup channelGroup encoderGroup </td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='test.VideoPlatformTest$ChannelNoneTest.testNoneChannel()'><b>testNoneChannel</b><br>Test class: test.VideoPlatformTest$ChannelNoneTest<br>Parameters: org/test123/orgUnits/test1234, NoneChannel, VENDOR_NONE, platforms/video/cameraAngles/jockey_cam_10, null, description, CHRIMSEventCode, 1290mn, Updatedchannel, platforms/video/cameraAngles/jockey_cam_10, org/test123/videoDecoders/0190179e-7c8b-706e-bdbe-ebc0960e8b74, updateddescription, CHRIMSEventCode, update</td>
+<td><div><pre>java.lang.RuntimeException: Failed to create booking: HTTP/1.1 400 Bad Request {&quot;code&quot;:3,&quot;message&quot;:&quot;Validation failed: \n -- VideoChannel.Decoder: &apos;Decoder&apos; must not be empty. Severity: Error&quot;,&quot;details&quot;:[{&quot;@type&quot;:&quot;type.googleapis.com/google.rpc.BadRequest&quot;,&quot;field_violations&quot;:[{&quot;field&quot;:&quot;VideoChannel.Decoder&quot;,&quot;description&quot;:&quot;&apos;Decoder&apos; must not be empty.&quot;}]}]}
+	at utils.BaseApiService.create(BaseApiService.java:60)
+	at utils.ApiServiceChannel.createChannel(ApiServiceChannel.java:20)
+	at test.VideoPlatformTest$ChannelNoneTest.testNoneChannel(VideoPlatformTest.java:221)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1071550332", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1071550332'><pre>java.lang.RuntimeException: Failed to create booking: HTTP/1.1 400 Bad Request {&quot;code&quot;:3,&quot;message&quot;:&quot;Validation failed: \n -- VideoChannel.Decoder: &apos;Decoder&apos; must not be empty. Severity: Error&quot;,&quot;details&quot;:[{&quot;@type&quot;:&quot;type.googleapis.com/google.rpc.BadRequest&quot;,&quot;field_violations&quot;:[{&quot;field&quot;:&quot;VideoChannel.Decoder&quot;,&quot;description&quot;:&quot;&apos;Decoder&apos; must not be empty.&quot;}]}]}
+	at utils.BaseApiService.create(BaseApiService.java:60)
+	at utils.ApiServiceChannel.createChannel(ApiServiceChannel.java:20)
+	at test.VideoPlatformTest$ChannelNoneTest.testNoneChannel(VideoPlatformTest.java:221)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>test.VideoPlatformTest$ChannelNoneTest@4cc451f2</td></tr>
+<tr>
+<td title='test.VideoPlatformTest$BookingTest.testPhenixBooking()'><b>testPhenixBooking</b><br>Test class: test.VideoPlatformTest$BookingTest<br>Parameters: org/test123/orgUnits/test1234, null, null, 2024-06-26T12:36:07.824415800Z, 2024-06-26T13:36:07.824415800Z, CHRIMSEventCode, 1290mn, 2024-06-26</td>
+<td><div><pre>java.lang.RuntimeException: Failed to create booking: HTTP/1.1 400 Bad Request {&quot;code&quot;:3,&quot;message&quot;:&quot;Validation failed: \n -- VideoBooking.Channel: &apos;Channel&apos; must not be empty. Severity: Error\n -- VideoBooking.Source: &apos;Source&apos; must not be empty. Severity: Error&quot;,&quot;details&quot;:[{&quot;@type&quot;:&quot;type.googleapis.com/google.rpc.BadRequest&quot;,&quot;field_violations&quot;:[{&quot;field&quot;:&quot;VideoBooking.Channel&quot;,&quot;description&quot;:&quot;&apos;Channel&apos; must not be empty.&quot;},{&quot;field&quot;:&quot;VideoBooking.Source&quot;,&quot;description&quot;:&quot;&apos;Source&apos; must not be empty.&quot;}]}]}
+	at utils.BaseApiService.create(BaseApiService.java:60)
+	at utils.ApiServiceBooking.createBooking(ApiServiceBooking.java:19)
+	at test.VideoPlatformTest$BookingTest.testPhenixBooking(VideoPlatformTest.java:242)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace129958347", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace129958347'><pre>java.lang.RuntimeException: Failed to create booking: HTTP/1.1 400 Bad Request {&quot;code&quot;:3,&quot;message&quot;:&quot;Validation failed: \n -- VideoBooking.Channel: &apos;Channel&apos; must not be empty. Severity: Error\n -- VideoBooking.Source: &apos;Source&apos; must not be empty. Severity: Error&quot;,&quot;details&quot;:[{&quot;@type&quot;:&quot;type.googleapis.com/google.rpc.BadRequest&quot;,&quot;field_violations&quot;:[{&quot;field&quot;:&quot;VideoBooking.Channel&quot;,&quot;description&quot;:&quot;&apos;Channel&apos; must not be empty.&quot;},{&quot;field&quot;:&quot;VideoBooking.Source&quot;,&quot;description&quot;:&quot;&apos;Source&apos; must not be empty.&quot;}]}]}
+	at utils.BaseApiService.create(BaseApiService.java:60)
+	at utils.ApiServiceBooking.createBooking(ApiServiceBooking.java:19)
+	at test.VideoPlatformTest$BookingTest.testPhenixBooking(VideoPlatformTest.java:242)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>2</td>
+<td>test.VideoPlatformTest$BookingTest@359f7cdf</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='test.VideoPlatformTest$DecoderDolbyNoneTest.testNoneDolbyDecoder()'><b>testNoneDolbyDecoder</b><br>Test class: test.VideoPlatformTest$DecoderDolbyNoneTest<br>Parameters: org/test123/orgUnits/test1234, DecoderNone-910bafa6-8881-4a5f-b2ae-33cebb69a805, VENDOR_LTN, DecoderIDNone-e519cdba-f8a2-4b6d-9bdd-3823f8cef1f0, VENDOR_NONE, STATE_UNSPECIFIED, NewDisplayName, NewDecoderIdentifier</td>
+<td></td>
+<td>4</td>
+<td>test.VideoPlatformTest$DecoderDolbyNoneTest@294425a7</td></tr>
+<tr>
+<td title='test.VideoPlatformTest$EncoderTest.testEncoder()'><b>testEncoder</b><br>Test class: test.VideoPlatformTest$EncoderTest<br>Parameters: org/test123/orgUnits/test1234, STATE_UNSPECIFIED, VENDOR_LTN, Encoder-ef8f79c4-3946-47a5-a093-a2a16d82e4b4, Test22s, newDisplayName21, newVendorEncoderId21</td>
+<td></td>
+<td>4</td>
+<td>test.VideoPlatformTest$EncoderTest@9f116cc</td></tr>
+<tr>
+<td title='test.VideoPlatformTest$SourceTest.testSource()'><b>testSource</b><br>Test class: test.VideoPlatformTest$SourceTest<br>Parameters: org/test123/orgUnits/test1234, SourceDisplayName-a2a6bf7e-d240-4e5f-bef6-39442397da30, org/test123/videoEncoders/01905455-3430-72ac-831e-5785d0995854, platforms/video/cameraAngles/jockey_cam_10, CHRIMSEventCode, 1290mn, 10s, 10s, true, SourceUpdate-90654611-3788-4b69-9b64-66a8d96c16a9, org/test123/videoEncoders/01900d57-deea-7485-b0ce-1b8a77998dc2, platforms/video/cameraAngles/jockey_cam_10, CHRIMSEventCode, update, 100s, 100s, false</td>
+<td></td>
+<td>9</td>
+<td>test.VideoPlatformTest$SourceTest@12468a38</td></tr>
+<tr>
+<td title='test.VideoPlatformTest$DecoderPhenixTest.testPhenixDecoder()'><b>testPhenixDecoder</b><br>Test class: test.VideoPlatformTest$DecoderPhenixTest<br>Parameters: org/test123/orgUnits/test1234, DecoderPhenix-7b4aa050-7591-41bc-83e6-3cfd2550f2d6, VENDOR_LTN, DecoderIDNone-fb0db971-2478-4c96-b82e-5f4e8b6600f3, VENDOR_PHENIX, STATE_UNSPECIFIED, ChannelIDNone-f34495c0-29d8-4e22-8e05-625ace75d4e3, ProjectID, Zone, InstanceName, DecoderPhenixUpdate-0eba5786-ba6a-49d4-b8e2-64a29dee4f33, DecoderIDNoneUpdate-1c41ab8d-4182-4e7b-9cb1-ae11c6ab9bbe, NewProjectID, NewZone, NewInstanceName, NewVendorChannelIdentifier</td>
+<td></td>
+<td>4</td>
+<td>test.VideoPlatformTest$DecoderPhenixTest@67d48005</td></tr>
+<tr>
+<td title='test.VideoPlatformTest$ChannelPhenixTest.testPhenixChannel()'><b>testPhenixChannel</b><br>Test class: test.VideoPlatformTest$ChannelPhenixTest<br>Parameters: org/test123/orgUnits/test1234, Channel-b3553d5b-26fc-4fe8-91ae-67af8ed51089, VENDOR_PHENIX, ChannelID-03d26478-303d-4af0-a0db-df8471ea857e, platforms/video/cameraAngles/jockey_cam_10, description, CHRIMSEventCode, 1290mn, true, UpdatedChannel, vendorChannelId, platforms/video/cameraAngles/jockey_cam_10, updateddescription, CHRIMSEventCode, test, false</td>
+<td></td>
+<td>4</td>
+<td>test.VideoPlatformTest$ChannelPhenixTest@6379eb</td></tr>
+<tr>
+<td title='test.VideoPlatformTest$ChannelDolbyTest.testDolbyChannel()'><b>testDolbyChannel</b><br>Test class: test.VideoPlatformTest$ChannelDolbyTest<br>Parameters: org/test123/orgUnits/test1234, ChannelDolby-9552ba4d-b261-4d0a-a7fd-1f678e342b7e, VENDOR_DOLBY, platforms/video/cameraAngles/jockey_cam_10, 123, platforms/video/videoChannelClusters/018e5dcb-8187-7037-883a-c26bb9b57468, _720p, _60f, description, CHRIMSEventCode, 1290mn, true, channelid, VENDOR_DOLBY, platforms/video/cameraAngles/jockey_cam_10, 12345, platforms/video/videoChannelClusters/018e5dcb-8187-7037-883a-c26bb9b57468, _720p, _120f, updateddescription, CHRIMSEventCode, 34update, true</td>
+<td></td>
+<td>4</td>
+<td>test.VideoPlatformTest$ChannelDolbyTest@4a94ee4</td></tr>
+</table><p>
+</body>
+</html>

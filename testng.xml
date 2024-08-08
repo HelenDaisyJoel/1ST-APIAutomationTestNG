@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+   <test name="API Tests">
+        <classes>
+            
+            <class name="test.VideoPlatformTest$EncoderTest" />
+            <class name="test.VideoPlatformTest$DecoderPhenixTest" />
+            <class name="test.VideoPlatformTest$SourceTest" />
+            <class name="test.VideoPlatformTest$ChannelPhenixTest" />
+            <class name="test.VideoPlatformTest$BookingTest" />
+            <class name="test.VideoPlatformTest$SourceTest" />
+            <class name="test.VideoPlatformTest$DecoderDolbyNoneTest" />
+            <class name="test.VideoPlatformTest$ChannelNoneTest" />
+            <class name="test.VideoPlatformTest$BookingTest" />
+            <class name="test.VideoPlatformTest$SourceTest" />
+            <class name="test.VideoPlatformTest$DecoderDolbyNoneTest" />
+            <class name="test.VideoPlatformTest$ChannelDolbyTest" />
+            <class name="test.VideoPlatformTest$BookingTest" />
+       
+        </classes>
+    </test>
+</suite> <!-- Suite -->

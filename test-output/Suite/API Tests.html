@@ -1,0 +1,124 @@
+<html>
+<head>
+<title>TestNG:  API Tests</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>API Tests</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>9/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Thu Jul 18 16:12:41 IST 2024</td>
+</tr>
+<tr><td>Total time:</td><td>39 seconds (39553 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='test.VideoPlatformTest$ChannelDolbyTest.testDolbyChannel()'><b>testDolbyChannel</b><br>Test class: test.VideoPlatformTest$ChannelDolbyTest<br>Parameters: org/test123/orgUnits/test1234, ChannelDolby-8d22, VENDOR_DOLBY, platforms/video/cameraAngles/jockey_cam_10, 123, platforms/video/videoChannelClusters/018e5dcb-8187-7037-883a-c26bb9b57468, _720p, _60f, description, CHRIMSEventCode, 1290mn, true, channelid, VENDOR_DOLBY, platforms/video/cameraAngles/jockey_cam_10, 12345, platforms/video/videoChannelClusters/018e5dcb-8187-7037-883a-c26bb9b57468, _720p, _120f, updateddescription, CHRIMSEventCode, 34update, true</td>
+<td></td>
+<td>3</td>
+<td>test.VideoPlatformTest$ChannelDolbyTest@3e58a80e</td></tr>
+<tr>
+<td title='test.VideoPlatformTest$ChannelNoneTest.testNoneChannel()'><b>testNoneChannel</b><br>Test class: test.VideoPlatformTest$ChannelNoneTest<br>Parameters: org/test123/orgUnits/test1234, NoneChannel, VENDOR_NONE, platforms/video/cameraAngles/jockey_cam_10, org/test123/videoDecoders/0190c570-4b7c-72c1-9ed7-95173711c22b, description, CHRIMSEventCode, 1290mn, ChannelUpdate-10b7, platforms/video/cameraAngles/jockey_cam_10, org/test123/videoDecoders/0190179e-7c8b-706e-bdbe-ebc0960e8b74, updateddescription, CHRIMSEventCode, update</td>
+<td></td>
+<td>3</td>
+<td>test.VideoPlatformTest$ChannelNoneTest@6b927fb</td></tr>
+<tr>
+<td title='test.VideoPlatformTest$BookingTest.testPhenixBooking()'><b>testPhenixBooking</b><br>Test class: test.VideoPlatformTest$BookingTest<br>Parameters: org/test123/orgUnits/test1234, org/test123/src/video/0190c570-1c00-723d-a0cd-04771faf3aeb, org/test123/videoChannels/0190c570-2c0b-73a2-86bb-410993dfffdb, 2024-07-18T11:43:05.377457300Z, 2024-07-18T12:43:05.377457300Z, CHRIMSEventCode, 1290mn, 2024-07-18</td>
+<td></td>
+<td>4</td>
+<td>test.VideoPlatformTest$BookingTest@4466af20</td></tr>
+<tr>
+<td title='test.VideoPlatformTest$DecoderDolbyNoneTest.testNoneDolbyDecoder()'><b>testNoneDolbyDecoder</b><br>Test class: test.VideoPlatformTest$DecoderDolbyNoneTest<br>Parameters: org/test123/orgUnits/test1234, DecoderNone-7ae1, VENDOR_LTN, DecoderIDNone-50f8, VENDOR_NONE, STATE_UNSPECIFIED, NewDisplayName, NewDecoderIdentifier</td>
+<td></td>
+<td>3</td>
+<td>test.VideoPlatformTest$DecoderDolbyNoneTest@a514af7</td></tr>
+<tr>
+<td title='test.VideoPlatformTest$DecoderPhenixTest.testPhenixDecoder()'><b>testPhenixDecoder</b><br>Test class: test.VideoPlatformTest$DecoderPhenixTest<br>Parameters: org/test123/orgUnits/test1234, DecoderPhenix-838f, VENDOR_LTN, DecoderIDNone-fb20, VENDOR_PHENIX, STATE_UNSPECIFIED, ChannelIDNone-17ac, ProjectID, Zone, InstanceName, DecoderPhenixUpdate-553c, DecoderIDNoneUpdate-1adc, NewProjectID, NewZone, NewInstanceName, NewVendorChannelIdentifier</td>
+<td></td>
+<td>4</td>
+<td>test.VideoPlatformTest$DecoderPhenixTest@359f7cdf</td></tr>
+<tr>
+<td title='test.VideoPlatformTest$SourceTest.testSource()'><b>testSource</b><br>Test class: test.VideoPlatformTest$SourceTest<br>Parameters: org/test123/orgUnits/test1234, SourceDisplayName-e79f, org/test123/videoEncoders/0190c56f-e7bf-73df-a189-7d965f83733e, platforms/video/cameraAngles/jockey_cam_10, CHRIMSEventCode, 1290mn, 10s, 10s, true, SourceUpdate-a840, org/test123/videoEncoders/01900d57-deea-7485-b0ce-1b8a77998dc2, platforms/video/cameraAngles/jockey_cam_10, CHRIMSEventCode, update, 100s, 100s, false</td>
+<td></td>
+<td>4</td>
+<td>test.VideoPlatformTest$SourceTest@1fa268de</td></tr>
+<tr>
+<td title='test.VideoPlatformTest$SourceTest.testSource()'><b>testSource</b><br>Test class: test.VideoPlatformTest$SourceTest<br>Parameters: org/test123/orgUnits/test1234, SourceDisplayName-e79f, org/test123/videoEncoders/0190c56f-e7bf-73df-a189-7d965f83733e, platforms/video/cameraAngles/jockey_cam_10, CHRIMSEventCode, 1290mn, 10s, 10s, true, SourceUpdate-a840, org/test123/videoEncoders/01900d57-deea-7485-b0ce-1b8a77998dc2, platforms/video/cameraAngles/jockey_cam_10, CHRIMSEventCode, update, 100s, 100s, false</td>
+<td></td>
+<td>4</td>
+<td>test.VideoPlatformTest$SourceTest@1fa268de</td></tr>
+<tr>
+<td title='test.VideoPlatformTest$ChannelPhenixTest.testPhenixChannel()'><b>testPhenixChannel</b><br>Test class: test.VideoPlatformTest$ChannelPhenixTest<br>Parameters: org/test123/orgUnits/test1234, Channel-25fb, VENDOR_PHENIX, ChannelID-8e3b, platforms/video/cameraAngles/jockey_cam_10, description, CHRIMSEventCode, 1290mn, true, ChannelUpdate-470a, vendorChannelId, platforms/video/cameraAngles/jockey_cam_10, updateddescription, CHRIMSEventCode, test, false</td>
+<td></td>
+<td>4</td>
+<td>test.VideoPlatformTest$ChannelPhenixTest@4f6ee6e4</td></tr>
+<tr>
+<td title='test.VideoPlatformTest$EncoderTest.testEncoder()'><b>testEncoder</b><br>Test class: test.VideoPlatformTest$EncoderTest<br>Parameters: org/test123/orgUnits/test1234, STATE_UNSPECIFIED, VENDOR_LTN, Encoder-1f1b, Encoder-67b4, EncoderUpdate-ced1, newVendorEncoderId21</td>
+<td></td>
+<td>6</td>
+<td>test.VideoPlatformTest$EncoderTest@3bb9a3ff</td></tr>
+</table><p>
+</body>
+</html>
